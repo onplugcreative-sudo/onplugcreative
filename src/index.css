@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-forest: #243B2F;
+  --color-cream: #F5EFE4;
+  --color-mustard: #F5B51D;
+  --color-burnt-orange: #C76B3B;
+  --color-matte-black: #111111;
+  --color-soft-beige: #E6D7C5;
+  --color-olive: #556B57;
+  --color-off-white: #FAF7F2;
+}
+
+@layer base {
+  body {
+    @apply bg-forest text-cream font-sans selection:bg-mustard selection:text-forest;
+    overflow-x: hidden;
+  }
+}
+
+.serif { font-family: var(--font-serif); }
+.sans { font-family: var(--font-sans); }
+
+.geometric-grid {
+  background-image: url('https://www.transparenttextures.com/patterns/60-lines.png');
+  background-attachment: fixed;
+}
+
+.asymmetric-rounding {
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.outline-text {
+  -webkit-text-stroke: 1px currentColor;
+  color: transparent;
+}
